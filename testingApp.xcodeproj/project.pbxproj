@@ -11,6 +11,9 @@
 		FA353BAE2A3289090067C17F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA353BAD2A3289090067C17F /* ContentView.swift */; };
 		FA353BB02A32890B0067C17F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA353BAF2A32890B0067C17F /* Assets.xcassets */; };
 		FA353BB32A32890B0067C17F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA353BB22A32890B0067C17F /* Preview Assets.xcassets */; };
+		FA353BBB2A328A7F0067C17F /* ResponseMortyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA353BBA2A328A7F0067C17F /* ResponseMortyModel.swift */; };
+		FA353BBE2A328AF10067C17F /* MortyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA353BBD2A328AF10067C17F /* MortyViewModel.swift */; };
+		FADC6A602A33202300239524 /* UIStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADC6A5F2A33202300239524 /* UIStyles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		FA353BAD2A3289090067C17F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FA353BAF2A32890B0067C17F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA353BB22A32890B0067C17F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FA353BBA2A328A7F0067C17F /* ResponseMortyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseMortyModel.swift; sourceTree = "<group>"; };
+		FA353BBD2A328AF10067C17F /* MortyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortyViewModel.swift; sourceTree = "<group>"; };
+		FADC6A5F2A33202300239524 /* UIStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStyles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,9 @@
 		FA353BAA2A3289090067C17F /* testingApp */ = {
 			isa = PBXGroup;
 			children = (
+				FADC6A5E2A33200E00239524 /* Styles */,
+				FA353BBC2A328ACA0067C17F /* ViewModel */,
+				FA353BB92A328A630067C17F /* Model */,
 				FA353BAB2A3289090067C17F /* testingAppApp.swift */,
 				FA353BAD2A3289090067C17F /* ContentView.swift */,
 				FA353BAF2A32890B0067C17F /* Assets.xcassets */,
@@ -65,6 +74,30 @@
 				FA353BB22A32890B0067C17F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FA353BB92A328A630067C17F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA353BBA2A328A7F0067C17F /* ResponseMortyModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA353BBC2A328ACA0067C17F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA353BBD2A328AF10067C17F /* MortyViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FADC6A5E2A33200E00239524 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				FADC6A5F2A33202300239524 /* UIStyles.swift */,
+			);
+			path = Styles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +170,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FADC6A602A33202300239524 /* UIStyles.swift in Sources */,
+				FA353BBB2A328A7F0067C17F /* ResponseMortyModel.swift in Sources */,
 				FA353BAE2A3289090067C17F /* ContentView.swift in Sources */,
+				FA353BBE2A328AF10067C17F /* MortyViewModel.swift in Sources */,
 				FA353BAC2A3289090067C17F /* testingAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,11 +306,14 @@
 				DEVELOPMENT_TEAM = PF8YS6L6J2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Rick&Morty Search";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -282,6 +321,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.magdiel.home.testingApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -299,11 +341,14 @@
 				DEVELOPMENT_TEAM = PF8YS6L6J2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Rick&Morty Search";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,6 +356,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.magdiel.home.testingApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
